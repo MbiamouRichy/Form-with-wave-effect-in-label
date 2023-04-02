@@ -1,84 +1,90 @@
-import
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+import * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-body{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-family: Lexend Deca;
+body {
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Lexend Deca;
 }
-.container{
-    padding: 20px 30px;
-    border: none;
-    box-shadow: 0 0 4px #333;
-    border-radius: 5px;
+.container {
+  padding: 20px 30px;
+  border: none;
+  box-shadow: 0 0 4px #333;
+  border-radius: 5px;
 }
-.container h1{
-  font-size: 3rem;
+.container h1 {
+  font-size: 2rem;
+  text-align: center;
   color: #333;
   margin: 0;
 }
-.container a{
-    text-decoration: none;
+.container a {
+  text-decoration: none;
 }
-form{
-    overflow: hidden;
+form {
+  overflow: hidden;
 }
-.form_control{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin: 20px 0;
-    padding: 10px 0;
+.form_control {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 20px 0;
+  padding: 10px 0;
 }
-.form_control input{
-    border: none;
-    border-bottom: 2px solid black;
-    padding: 15px 5px;
-    font-size: 15px;
-    width: 100%;
-    height: 0;
-    background: transparent;
-    outline: none;
+.form_control input {
+  border: none;
+  border-bottom: 2px solid black;
+  padding: 15px 5px;
+  font-size: 15px;
+  width: 100%;
+  height: 0;
+  background: transparent;
+  outline: none;
 }
 .form_control input:focus-within,
 .form_control input:valid {
-    border-bottom-color: rgba(0, 0, 0, 0.6);
+  border-bottom-color: rgba(0, 0, 0, 0.6);
 }
-.form_control label{
-    position: absolute;
-    top: 10px;
-    left: 0;
-    font-size: 15px;
-    color: rgba(0, 0, 0, 1);
-    span{
-        display: inline-block;
-        min-width: 5px;
-       transition: all 0.5s cubic-bezier(0.68, -0.7, 0.7, 1);
-    }
+.form_control label {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  font-size: 15px;
+  color: rgba(0, 0, 0, 1);
+  span {
+    display: inline-block;
+    min-width: 5px;
+    transition: all 0.5s cubic-bezier(0.68, -0.7, 0.7, 1);
+  }
 }
 .form_control input:focus-within + label span,
-.form_control input:valid + label span{
-    transform: translateY(-20px);
-    color: rgba(0, 0, 0, 0.6);
+.form_control input:valid + label span {
+  transform: translateY(-20px);
+  color: rgba(0, 0, 0, 0.6);
 }
-.btn{
-    width: 100%;
+.btn {
+  width: 100%;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  color: #fff;
+  background-color: #333;
+  border-radius: 5px;
+  border: none;
+}
+.btn:active {
+  transform: scale(0.98);
+}
+@media screen and (max-width: 320px) {
+  .container{
     padding: 10px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 15px;
-    color: #fff;
-    background-color: #333;
-    border-radius: 5px;
-    border: none;
-}
-.btn:active{
-    transform: scale(0.98);
+  }
 }
