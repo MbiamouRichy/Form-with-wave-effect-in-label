@@ -56,10 +56,14 @@ form{
     left: 0;
     font-size: 15px;
     color: rgba(0, 0, 0, 1);
-    transition: all 0.5s cubic-bezier(0.68, -0.7, 0.7, 1);
+    span{
+        display: inline-block;
+        min-width: 5px;
+       transition: all 0.5s cubic-bezier(0.68, -0.7, 0.7, 1);
+    }
 }
-.form_control input:focus-within + label,
-.form_control input:valid + label{
+.form_control input:focus-within + label span,
+.form_control input:valid + label span{
     transform: translateY(-20px);
     color: rgba(0, 0, 0, 0.6);
 }
